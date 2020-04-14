@@ -1,4 +1,4 @@
-#sbt Tutorial
+# sbt Tutorial
 Sbt mechanics and basic application setup from scratch till open sourcing stage.
 
 ## sbt shell
