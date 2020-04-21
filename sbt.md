@@ -683,7 +683,8 @@ Now, all the dependencies could be managed without touching `build.sbt` file.
 ## Sub-projects relationships
 The plan is to have `calculators` sub-project depending on `api` one. It is achieved by adding `.dependOn(api)` in `calculators` sub-project.
 
-This way sbt keeps track on changes done to `api` and making them available to `calculators`.
+This way sbt keeps track on changes done to `api` and making them available to `calculators`. 
+In other words, `calculators` needed `api` project on its **classpath**. 
 
 ```
 name := "sbt-getting-started"
