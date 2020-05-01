@@ -783,7 +783,28 @@ Run `docker images` for validating, if `calculators` are having image created.
 
 Further, `calculators` could be validated by running Docker image `docker run -it calculators:0.1.0-SNAPSHOT 100 20`.
  
+## Fat jar assembly
+If only fat jar is needed, it could be generated with [sbt-assembly plugin](https://github.com/sbt/sbt-assembly) help. 
 
+In `plugins.sbt` add `addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10")`. In `build.sbt` add:
+
+```
+name := "investment-alerter"
+ThisBuild / version := "1.0"
+ThisBuild / organization := "com.cyber"
+ThisBuild / scalaVersion := "2.13.1"
+
+assemblyJarName in assembly := s"$name.jar"
+
+lazy val alerters = project
+  .settings(
+    libraryDependencies ++= Dependencies.alertersDependencies,
+    mainClass in assembly := Some("RocketLauncher"),
+    test in assembly := {},
+  )
+```
+
+Remember about reloading `build.sbt` file.
 
 ## Continuous integration
 TravisCI will be used, because it is free for open-source projects and integrates well with GitHub. 
