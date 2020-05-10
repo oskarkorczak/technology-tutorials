@@ -1,14 +1,14 @@
-# Scala seed
+# Sample scala seed
 All details and examples of bleow features could be found at [scala-seed.g8](https://github.com/DevInsideYou/scala-seed.g8) template.
 
 ## Plugins
-Plugins worth looking at in most of the Scala related projects.
+Some potentially useful plugins worth looking at in Scala related projects.
 
 ### Git
-Allows to run git commands through sbt, when it is fired. It can add the prompt, as well. 
+Allows to run git commands through sbt shell, when it is running. It can add its prompt, as well. Plugin details: `addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "1.0.0")`
 
 ### Clippy 
-Highlights error messages and gives advices. There is few configs which are in the Giter8 template. 
+[Highlights error messages](https://github.com/softwaremill/scala-clippy) and gives advices during compilation. There is few configs which are in the Giter8 template.
 
 ### Sbt dependency updates
 In `aliases.sbt` file there is:
