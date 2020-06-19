@@ -162,7 +162,7 @@ Docker autocomplition.
 If you add `.env` file to `whatever` directory with variable defined e.g.: `FOO=BAR`, then whenever you go to `whatever` directory it will load that variable `FOO` to the context. 
 
 ##### extract
-Single commnad to extract/unzip/untar/etc various formats of the archives. 
+Single commnad to extract/unzip/untar/etc various formats of the archives `extract bla.zip`.
 
 ##### mosh
 Replacement for `ssh` and it gives autocomplition.
@@ -181,6 +181,27 @@ Shows in red when somehting is done in a wrong way. Highlights in green correct 
 Install it from the [script](https://github.com/DevInsideYou?q=install-zsh&type=&language=).
 
 ##### zsh-z
-Fuzzy search into directories one have already been so far.
+Fuzzy search into directories one have already been so far e.g.: `z coll` searches for `homebrew-collections` direcotry and jumps there.
 
 Install it from the [script](https://github.com/DevInsideYou?q=install-zsh&type=&language=).
+
+##### fzf
+Fuzzy searcher for text (e.g.: list of commands). Similar to `ctrl + shift + R`, but order of words does not matter and gives more Google like experience.
+
+Install it from the [script](https://github.com/DevInsideYou/install-fzf).
+
+During installation do NOT update shell configuration files. Instead there should be below IF in `.zshrc` file. 
+
+```
+if [ -f "$HOME/.fzf.zsh" ] ; then
+	source "$HOME/.fzf.zsh"
+fi
+```
+
+###### Usage
+In Terminal type:
+
+- `fzf` and keep typing to search for phrase
+- `ll | fzf` and keep typing to search for phrase
+- `ctrl + shift + R` integrates with shell search, so keep typing to search for phrase
+
