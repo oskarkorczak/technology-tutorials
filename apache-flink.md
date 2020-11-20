@@ -151,37 +151,11 @@ AWS provides cloud service hosting Flink.
 
 ## Integrations
 
-### Event Logs
-
-* Kafka
-* Kinesis
-* Pulsar
-
-### File Systems
-
-* S3
-* HDFS
-* NFS
-
-### Encodings
-
-* Avro
-* JSON
-* CSV
-* ORC
-* Parquet
-
-### Databases
-
-* JDBC
-* HCatalog
-
-### Key-Value Stores
-
-* Cassandra
-* ElasticSearch
-* Redis
-
+* Event Logs: Kafka, Kinesis, Pulsar
+* File Systems: S3, HDFS, NFS
+* Encodings: Avro, JSON, CSV, ORC, Parquet
+* Databases: JDBC, HCatalog
+* Key-Value Stores: Cassandra, ElasticSearch, Redis
 
 
 [yt-apache-flink-intro]: https://www.youtube.com/watch?v=DkNeyCW-eH0
