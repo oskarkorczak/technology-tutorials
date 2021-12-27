@@ -37,12 +37,12 @@ Allows to select entire lines in one go.
 #### Block Select (`Ctrl v`)
 Allows to select rectangular block of text. Similar to InteliJ block selection.
 
-### Configuration (`:`)
+### Command  (`:`)
 Allows to configure `Vim` usually via `set` command. 
 
 Also, `Vim` has a configuration file called `~/.vimrc` where all `set <option>` commands are set once and for all. 
 
-## Syntax (Verb + Noun)
+## Syntax (Gerb + Noun)
 `Vim`'s `normal` mode allows to use a very powerful and simpole programming language to communicate with. 
 
 ### Verbs
@@ -152,9 +152,40 @@ There are few usage examples:
 
 
 ## Configurations
-* `:set nocompatible` don't be compatible with old Vim version, all new stuff works fine
+* `:set nocompatible` don't be compatible with old Vim version, all new stuff works fine; enter the current millenium
+* `syntax enable` enable syntax colouring
+* `filetype plugin on` Vim built in plugin used for file browsing; MORE DESC NEEDED HERE
 * `:set incsearch <phrase>` incremental search; highlights parts of the searched word AS YOU TYPE
 * `:set autoindent` automatically INDENT lines after `enter` and indents even more after `TAB`
 * `:set hlsearch` highlights all `<phrase>` you are looking for; `n` works as NEXT with different highlight colour
 * `set relativenumber` turns on relative lines numbering allowing to see absolute line where the cursor is and line offsets (up & down) for all other lines. It allows faster naviagion like `7j` or `c6j`.
 * `nohl` switch off `hlsearch` highlights
+
+### Fuzzy Search
+`Vim` could be used as fuzzy search tool for files in the current directory and any nesting level below. 
+
+Necessary configurations:
+
+* `set path+=**` use recurssive dir search for `:find` command
+* `set wildmenu` shows a bar with available filenames while using `:find` search in `Vim`
+
+What it gives:
+
+* hit `tab` to `:find` by partial match
+* use `*` to make it fuzzy
+
+Complementary commands:
+
+* `:b` lets you autocomplete any open buffer (file); requires to start typing filename and hitting `tab`
+* `:ls` shows already open buffers (files) in `Vim`
+
+## Help
+
+* `:help` first man page
+* `:help <phrase>` searches manual for a `<phrase>` (by default in normal mode)
+	* `i_<phrase>` search for `<phrase>` in the insert mode
+	* `c_<phrase>` search for `<phrase>` in the command mode
+* `:helpgrep <phrase>` it searches and greps through every single help document it can find in the entire manual; most useful command
+	* `cn` next document
+	* `cp` previous document
+	* `cl` list documents
